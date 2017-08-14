@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>outside js http status_code fuzz</title>
+</head>
+<body>
+<script type="text/javascript">
+(function(){
+    var codelist = [100 ,101 ,102 ,200 ,201 ,202 ,203 ,204 ,205 ,206 ,207 ,208 ,226 ,300 ,301 ,302 ,303 ,304 ,305 ,306 ,307 ,308 ,404 ,400 ,401 ,402 ,403 ,404 ,405 ,406 ,407 ,408 ,409 ,410 ,411 ,412 ,413 ,414 ,415 ,416 ,417 ,418 ,421 ,422 ,423 ,424 ,426 ,428 ,429 ,431 ,451 ,500 ,501 ,502 ,503 ,504 ,505 ,506 ,507 ,508 ,510 ,511 ,103 ,103 ,420 ,420 ,450 ,498 ,499 ,509 ,530 ,598 ,440 ,449 ,451 ,444 ,495 ,496 ,497 ,499 ,520 ,521 ,522 ,523 ,524 ,525 ,526 ,527];
+    for (var i = codelist.length - 1; i >= 0; i--) {
+        status_code = codelist[i];
+        var iframe = document.createElement('iframe');
+        var html = '<script src=http://127.0.0.1:8082/php_demo.php?x='
+                    + status_code
+                    + '></'
+                    + 'script>';
+        iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+        document.body.appendChild(iframe);
+    }
+})();
+</script>
+</body>
+</html>
+
+

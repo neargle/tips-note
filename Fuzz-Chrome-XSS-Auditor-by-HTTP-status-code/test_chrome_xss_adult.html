@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>outside js http status_code fuzz</title>
+</head>
+<body>
+
+<script type="text/javascript">
+(function(){
+    var codelist = [
+    200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 
+    300, 301, 302, 303, 304, 305, 306, 307, 308
+];
+    for (var i = codelist.length - 1; i >= 0; i--) {
+        status_code = codelist[i];
+        var iframe = document.createElement('iframe');
+        iframe.src = 'http://127.0.0.1/tmp_demo.php?x=%3Cscript%20src=//127.0.0.1/fuzzfile/'
+                    + status_code +'.php%3E%3C/script%20';
+        document.body.appendChild(iframe);
+    }
+})();
+</script>
+</body>
+</html>
+
+
