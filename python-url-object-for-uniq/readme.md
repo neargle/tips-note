@@ -1,6 +1,6 @@
 # 专门用于sql注入等扫描器的url去重和比较 Python url类
 
-(./url_filter.py)[./url_filter.py 代码]
+[./url_filter.py 代码](./url_filter.py)
 
 ## 对比依据
 
