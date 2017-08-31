@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iframe request merging</title>
+<!-- <script type="text/javascript" src="http://0.0.0.0:8888/jsonp/102400"></script>
+</head>
+<body>
+<script type="text/javascript">
+(function(){
+    for (var size = 1; size <= 10; size++) {
+        var iframe = document.createElement('iframe');
+        html = '<script type="text/javascript" src="http://0.0.0.0:8888/jsonp/102400"></s' + 'cript>'
+        iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+        document.body.appendChild(iframe);
+    }
+})();
+</script> -->
+
+<!-- test2 -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<iframe src="data:text/html;charset=utf-8,%3Cscript%20src%3D%22https%3A%2F%2Fcdn.bootcss.com%2Fjquery%2F3.2.1%2Fjquery.js%22%3E%3C%2Fscript%3E"></iframe>
+
+<!-- test3 -->
+<iframe src="./many_out_script.html"></iframe>
+
+</body>
+</html>
+
+
