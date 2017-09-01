@@ -1,3 +1,3 @@
-# 使用request merging bypass referer 检测
+# 使用request merging bypass referer(jsonp) 检测
 
 
