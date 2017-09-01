@@ -10,7 +10,7 @@ e.g.
 <script type="text/javascript" src="http://0.0.0.0:8888/jsonp/1"></script>
 <script type="text/javascript" src="http://0.0.0.0:8888/jsonp/1"></script>
 ```
-只会请求并加载一次"http://0.0.0.0:8888/jsonp/1"资源。
+只会请求并加载一次 "http://0.0.0.0:8888/jsonp/1" 资源。
 
 *曾经有研究指出，这种请求合并想象在iframe里也存在*，那么浏览器的这种特性就可以用来bypass部分程序的referer的判断，如jsonp的防御机制。
 
