@@ -1,6 +1,23 @@
-<iframe src="http://10.101.122.75:8082/"></iframe>
+<body>
+    <iframe src="http://10.101.122.75:8082/"></iframe>
+    <iframe src="http://10.101.122.75:8081/"></iframe>
+</body>
 
-<script type="text/javascript" src="http://10.101.122.75:8081/jsonp.php"></script>
+<!-- <script type="text/javascript" src="http://10.101.122.75:8082/jsonp.php"></script>
 <script type="text/javascript">
     document.write(location.href + ":" +jquery());
+</script> -->
+
+<!-- <script type="text/javascript">
+    setTimeout(function () {
+        var s = document.createElement('script');
+        s.src = "http://10.101.122.75:8082/jsonp.php";
+        document.body.appendChild(s);
+
+        setTimeout(function(){
+            document.write(location.href + ":" +jquery());
+        }, 1000);
+
+    }, 1000);
 </script>
+ -->
