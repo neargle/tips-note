@@ -1,5 +1,8 @@
 # 使用request merging bypass referer(jsonp) 检测
 
+所有代码在: 
+https://github.com/neargle/tips-note/tree/master/request_merging
+
 ## 1. 关于request merging和其会产生的问题
 
 request merging : 浏览器会把多次相同的请求(并非所有请求)合并成一次，以加快资源加载速度。
@@ -36,7 +39,7 @@ function startsWith($url, $domain) {
 
 $referrer = @$_SERVER['HTTP_REFERER'];
 
-if (startsWith($referrer, "http://example.com:8082")) {
+if (startsWith($referrer, "http://example.com:8082/")) {
     $js_code = 'function jquery() { return "security content";}';
     echo $js_code;
 } else {
@@ -195,8 +198,9 @@ poc修改为:
     <iframe src="http://example.com:8081/"></iframe>
 </body>
 ```
-
 这样保证了，攻击者域中的请求后执行。
+
+从图片中可以看出，我们在 “example.com:8081” 域中访问到只有在 “example.com:8082” 才能访问到的资源，而且请求列表中，浏览器只请求jsonp资源一次。
 思路验证成功。
 
 在 IE11和Edge上 好像现在依旧没有fix该问题。我这边的版本可能稍微低了一点，POC都是可用的。
@@ -215,5 +219,6 @@ poc修改为:
 https://twitter.com/nearg1e/status/903297400797663232
 Exploiting the unexploitable with lesser known browser tricks from filedescriptor
 
+## Thanks
 
-
+@filedescriptor
