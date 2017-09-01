@@ -201,9 +201,14 @@ poc修改为:
 
 在 IE11和Edge上 好像现在依旧没有fix该问题。我这边的版本可能稍微低了一点，POC都是可用的。
 
+- Microsoft Edge 40.15063.0.0
+- IE 11.296.15063.0
+
 ## other
 
 现在很多浏览器漏洞(bug)都是和新特性(feature)相关的，或许request merging还有别的用处？
+
+想测试自己所用的浏览器是否受印象只需访问：[http://blog.neargle.com/tips-note/request_merging/iframe_merging_poc.html](http://blog.neargle.com/tips-note/request_merging/iframe_merging_poc.html),开发者工具中网络对“https://cdn.bootcss.com/jquery/3.2.1/jquery.js”的请求只进行了一次，那么就是受影响的。
 
 ## link
 
