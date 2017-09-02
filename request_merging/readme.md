@@ -212,8 +212,8 @@ poc修改为:
 
 ## link
 
-https://twitter.com/nearg1e/status/903297400797663232
-Exploiting the unexploitable with lesser known browser tricks from filedescriptor
+- https://twitter.com/nearg1e/status/903297400797663232
+- Exploiting the unexploitable with lesser known browser tricks from filedescriptor
 
 
 
