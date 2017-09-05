@@ -1,4 +1,4 @@
-# firefox任意版本在HTTP1.0且HTTP状态码为304的情况下任何Content-type都会解析html
+# firefox任意版本在HTTP1.0且HTTP状态码为304的情况下, 任何Content-type都会解析为html
 
 此Tip是我们不小心使出来的，不知道之前有没有人发现过。
 
