@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>outside js http status_code fuzz</title>
+</head>
+<body>
+<script type="text/javascript">
+(function(){
+    for (var i = 0; i <= 400; i++) {
+        var iframe = document.createElement('iframe');
+        iframe.src = i+".html";
+        document.body.appendChild(iframe);
+    }
+})();
+</script>
+</body>
+</html>
+
+
