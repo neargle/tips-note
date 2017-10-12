@@ -32,6 +32,8 @@ def main():
     for md_file in md_lst:
         content = open(md_file, "r").read()
         mth = re_md_h1.match(content)
+        if md_file.endswith("/readme.md"):
+            md_file = os.path.dirname(md_file)
         if mth:
             head1 = mth.group(1)
             li_item = "- [{}]({})\n".format(head1, md_file)
