@@ -28,3 +28,16 @@
 
 - https://www.anquanke.com/post/id/104319
 
+## 代码
+
+```php
+<?php
+$id = $_GET['id'];
+if(preg_match("/(sleep|benchmark|outfile|dumpfile|load_file|join)/i", $_GET['id']))
+{
+    die("you bad bad!");
+}
+mysql_query("SELECT * FROM `articles` WHERE  id = '" . $id . "'");
+?>
+```
+
